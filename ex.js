@@ -20,8 +20,8 @@ var car02={
 	}
 }
 var car03={
-	name:"sonata3",
-	ph:"500ph",
+	name:"BMW",
+	ph:"333",
 	start : function(){
 		console.log("engine is starting");
 	},
@@ -31,4 +31,12 @@ var car03={
 }
 cars[0]=car01;
 cars[1]=car02;
-console.log(cars);
+cars[2]=car03;
+
+for(var i=0;i<cars.length;i++){
+	var element= cars[i];
+	if(element.name=="BMW"){
+		console.log(element);
+	}
+	
+}

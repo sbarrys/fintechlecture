@@ -16,6 +16,13 @@ app.use(express.static(__dirname+'/public'))
 app.use(express.json());
 app.use(express.urlencoded({extended:false}))
 
+app.get('/login',function(req,res){
+  res.render('login');
+})
+app.post('/login',function(req,res){
+
+  
+})
 app.get("/signup",function(req,res){
     res.render('signup');
 })

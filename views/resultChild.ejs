@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<body>
+<div id="accessToken"><%=data.access_token%></div>
+<div id="refreshToken"><%=data.refresh_token%></div>
+<div id="usenum"><%=data.user_seq_no%></div>
+</body>
+<!--//auth는 resultChild 를 랜더링 할것이다.-->
+<script>
+
+    //부모창과 자식창의 관계에 데이터 전송
+   opener.document.getElementById("accessToken").value =
+       document.getElementById("accessToken").textContent;
+   opener.document.getElementById("refreshToken").value =
+       document.getElementById("refreshToken").textContent;
+   opener.document.getElementById("useseqnum").value =
+       document.getElementById("usenum").textContent;
+</script>
+</html>

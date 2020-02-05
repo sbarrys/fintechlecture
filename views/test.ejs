@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <body>
+        <h1>
+            회원가입
+        </h1>
+        id:<input type="text" placeholder="아이디" id="id"><br>
+        password: <input type="text" placeholder="비밀번호" id="password"> 
+        <input type="submit" id="signupBtn">
+    </body>
+
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.js"
+    integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+    crossorigin="anonymous"></script>
+
+    <script>
+        console.log("page 가 로딩됨 ");
+        $("#signupBtn").click(function(){
+            console.log("버튼클릭");
+            console.log($("#id").val());
+            var id1=$('#id').val();
+            var password1=$('password').val();
+            
+        $.ajax({        //request와 기능이 비슷하지만, 프론트엔드에서의 요청주고받기용이다.
+            url:'http://localhost:3000/join',
+            type:'POST',
+            data:{
+                id: id1,
+                password : password1
+            },
+            success:function(data){
+                console.log(data);
+            }
+        })
+
+
+    
+        })
+    </script>
+</html>

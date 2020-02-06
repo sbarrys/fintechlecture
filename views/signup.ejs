@@ -138,7 +138,7 @@
 						</div>
 						<div class="form-row no-padding">
 							<i class="fa fa-user"></i>
-							<input type="text" id="userUserSeqNo" name="aaa" class="form-element" placeholder="userseqno" >
+							<input type="text" id="userSeqNo" name="aaa" class="form-element" placeholder="userseqno" >
                         </div>
                         <button id="clickbtn">안녕</button>
 					</div>
@@ -184,9 +184,10 @@
     <script>
         $("#authBtn").click(function(){
             var tmpWindow = window.open("about:blank");
-            //사용자 정보와 함께 사용자 인증 API 로 이동시킨다.이후 콜백uri를 로컬authResult로 보낸다.
-            tmpWindow.location = "https://testapi.openbanking.or.kr/oauth/2.0/authorize?response_type=code&client_id=q7kH44ThJwjpvNRg0BbJvE1yxvx5X53DKz1rNgPF&redirect_uri=http://localhost:3000/authResult&scope=login inquiry transfer&state=12345678901234567890123456789012&auth_type=0";
-        })
+			//사용자 정보와 함께 사용자 인증 API 로 이동시킨다.이후 콜백uri를 로컬authResult로 보낸다.
+            tmpWindow.location = "https://testapi.openbanking.or.kr/oauth/2.0/authorize?response_type=code&client_id=A7DQhWnLZ27cmS36sbbeIrz4x8Ml6qr2jKbs9n6f&redirect_uri=http://localhost:3000/authResult&scope=login inquiry transfer&state=12345678901234567890123456789012&auth_type=0";
+			
+		})
 		$("#signupBtn").click(function(){
             var userName = $("#userName").val();
             var userEmail = $("#userEmail").val();
